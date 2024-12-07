@@ -26,11 +26,11 @@ class Database :
         self.con.commit()
 
     def fetch(self):
-        self.cur.execute (" SELECT * FROM employess") 
+        self.cur.execute (" SELECT * FROM employees") 
         rows = self.cur.fetchall ()
         return rows
 
-    def remove(self):
+    def remove(self,id):
         self.cur.execute("delete from employees where id=?",(id,)) 
         self.con.commit()
 
